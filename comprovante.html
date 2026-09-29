@@ -2,28 +2,48 @@
 <html lang="pt-BR">
 
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
     <title>Enviar comprovante</title>
 
-    <link rel="stylesheet" href="style.css">
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
 </head>
+
 
 <body>
 
+
     <main class="pagina">
+
 
         <div class="card">
 
-            <div class="icone">📄</div>
 
-            <h1>Enviar comprovante</h1>
+            <div class="icone">
+                📄
+            </div>
+
+
+            <h1>
+                Enviar comprovante
+            </h1>
+
 
             <p>
                 Obrigado por realizar sua doação!
                 Envie agora o comprovante do Pix.
             </p>
+
 
             <form
                 action="https://formsubmit.co/marllonbomfim0@gmail.com"
@@ -31,11 +51,17 @@
                 enctype="multipart/form-data"
             >
 
+
+                <!-- ASSUNTO DO E-MAIL -->
+
                 <input
                     type="hidden"
                     name="_subject"
                     value="Novo comprovante - Juntos por uma Criança"
                 >
+
+
+                <!-- FORMATO DO E-MAIL -->
 
                 <input
                     type="hidden"
@@ -43,9 +69,13 @@
                     value="table"
                 >
 
+
+                <!-- NOME -->
+
                 <label for="nome">
                     Seu nome
                 </label>
+
 
                 <input
                     type="text"
@@ -55,9 +85,13 @@
                     required
                 >
 
+
+                <!-- VALOR -->
+
                 <label for="valor">
                     Valor da doação
                 </label>
+
 
                 <input
                     type="text"
@@ -67,9 +101,21 @@
                     required
                 >
 
-                <label for="arquivo">
+
+                <!-- COMPROVANTE -->
+
+                <label>
                     Comprovante do Pix
                 </label>
+
+
+                <label
+                    for="arquivo"
+                    class="botao-arquivo"
+                >
+                    📎 Selecionar comprovante
+                </label>
+
 
                 <input
                     type="file"
@@ -77,11 +123,24 @@
                     name="attachment"
                     accept=".pdf,.jpg,.jpeg,.png"
                     required
+                    hidden
                 >
 
+
+                <p
+                    id="nomeArquivo"
+                    class="nome-arquivo"
+                >
+                    Nenhum comprovante selecionado
+                </p>
+
+
                 <small>
-                    Formatos aceitos: PDF, JPG, JPEG e PNG.
+                    Aceitamos PDF, JPG, JPEG e PNG.
                 </small>
+
+
+                <!-- BOTÃO ENVIAR -->
 
                 <button
                     type="submit"
@@ -90,7 +149,11 @@
                     📤 Enviar comprovante
                 </button>
 
+
             </form>
+
+
+            <!-- VOLTAR -->
 
             <a
                 href="pix.html"
@@ -99,9 +162,34 @@
                 ← Voltar
             </a>
 
+
         </div>
 
+
     </main>
+
+
+    <script>
+
+        document
+            .getElementById("arquivo")
+            .addEventListener("change", function () {
+
+                var arquivo = this.files[0];
+
+                if (arquivo) {
+
+                    document
+                        .getElementById("nomeArquivo")
+                        .textContent =
+                        "✅ " + arquivo.name;
+
+                }
+
+            });
+
+    </script>
+
 
 </body>
 
