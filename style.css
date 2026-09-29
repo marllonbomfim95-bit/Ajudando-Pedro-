@@ -11,7 +11,7 @@ body {
 }
 
 
-/* PÁGINA */
+/* PÁGINAS */
 
 .pagina {
     min-height: 100vh;
@@ -22,55 +22,77 @@ body {
 
     padding: 25px;
 
-    background:
-        linear-gradient(
-            135deg,
-            #eaf4ff,
-            #ffffff
-        );
+    background: linear-gradient(
+        135deg,
+        #eaf4ff,
+        #ffffff
+    );
 }
 
 
-/* PRIMEIRA PÁGINA */
+/* FOTO DO TOPO */
 
-.inicio {
+.foto-topo {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+
+    border-bottom: 5px solid #075dcc;
+}
+
+.foto-topo img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+/* CONTEÚDO DA PRIMEIRA PÁGINA */
+
+.inicio-conteudo {
+    min-height: calc(100vh - 300px);
+
+    padding: 45px 25px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
     text-align: center;
 
-    background:
-        linear-gradient(
-            135deg,
-            #075dcc,
-            #4da3ff
-        );
+    background: linear-gradient(
+        135deg,
+        #075dcc,
+        #4da3ff
+    );
 
     color: white;
 }
 
-.conteudo {
-    width: 100%;
+.inicio-conteudo .coracao {
+    font-size: 55px;
+    margin-bottom: 10px;
+}
+
+.inicio-conteudo h1 {
+    font-size: 38px;
+    margin-bottom: 10px;
+}
+
+.inicio-conteudo h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.inicio-conteudo p {
     max-width: 600px;
-}
 
-.coracao {
-    font-size: 65px;
-    margin-bottom: 15px;
-}
+    font-size: 17px;
 
-.inicio h1 {
-    font-size: 42px;
-    margin-bottom: 15px;
-}
-
-.inicio .subtitulo {
-    font-size: 25px;
-    font-weight: bold;
-    margin-bottom: 15px;
-}
-
-.inicio p {
-    font-size: 18px;
     line-height: 1.6;
-    margin-bottom: 30px;
+
+    margin-bottom: 25px;
 }
 
 
@@ -99,7 +121,9 @@ body {
 
 .card p {
     color: #666;
+
     line-height: 1.6;
+
     margin-bottom: 25px;
 }
 
@@ -114,7 +138,7 @@ body {
 }
 
 
-/* BOTÃO */
+/* BOTÃO PRINCIPAL */
 
 .botao {
     display: block;
@@ -126,14 +150,17 @@ body {
     padding: 16px;
 
     border: none;
+
     border-radius: 12px;
 
     background: #0b5ed7;
+
     color: white;
 
     text-decoration: none;
 
     font-size: 17px;
+
     font-weight: bold;
 
     cursor: pointer;
@@ -145,6 +172,7 @@ body {
 
 .botao:hover {
     transform: translateY(-2px);
+
     background: #084db3;
 }
 
@@ -173,6 +201,7 @@ body {
     border-radius: 12px;
 
     font-size: 16px;
+
     font-weight: bold;
 
     cursor: pointer;
@@ -180,6 +209,7 @@ body {
 
 .valores button:hover {
     background: #0b5ed7;
+
     color: white;
 }
 
@@ -312,6 +342,47 @@ small {
 }
 
 
+/* BOTÃO SELECIONAR COMPROVANTE */
+
+.botao-arquivo {
+    display: block;
+
+    width: 100%;
+
+    padding: 15px;
+
+    margin-top: 8px;
+
+    background: #0b5ed7;
+
+    color: white;
+
+    border-radius: 12px;
+
+    font-weight: bold;
+
+    text-align: center;
+
+    cursor: pointer;
+}
+
+.botao-arquivo:active {
+    transform: scale(0.98);
+}
+
+.nome-arquivo {
+    margin-top: 10px !important;
+
+    margin-bottom: 5px !important;
+
+    font-size: 14px;
+
+    color: #555 !important;
+
+    word-break: break-word;
+}
+
+
 /* AGRADECIMENTO */
 
 .agradecimento .coracao {
@@ -334,28 +405,17 @@ small {
 
 .frase-final {
     font-weight: bold;
+
     color: #0b5ed7 !important;
 }
 
 
 /* CELULAR */
 
-@media (max-width: 500px) {
+@media (max-width: 600px) {
 
     .pagina {
         padding: 15px;
-    }
-
-    .inicio h1 {
-        font-size: 34px;
-    }
-
-    .inicio .subtitulo {
-        font-size: 21px;
-    }
-
-    .inicio p {
-        font-size: 16px;
     }
 
     .card {
@@ -366,87 +426,35 @@ small {
         font-size: 27px;
     }
 
-    .valores {
-        gap: 10px;
-    }
-.foto-topo {
-    width: 100%;
-    height: 300px;
-    
-
-}
-
-
-.foto-topo img {
-    width: 100%;
-    height: 150%;
-    
-
-}
-
-
-.inicio-conteudo {
-    min-height: calc(100vh - 300px);
-
-    padding: 45px 25px;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-
-    text-align: center;
-
-    background: linear-gradient(
-        135deg,
-        #075dcc,
-        #4da3ff
-    );
-
-    color: white;
-}
-
-
-.inicio-conteudo .coracao {
-    font-size: 55px;
-    margin-bottom: 10px;
-}
-
-
-.inicio-conteudo h1 {
-    font-size: 38px;
-    margin-bottom: 10px;
-}
-
-
-.inicio-conteudo h2 {
-    font-size: 24px;
-    margin-bottom: 15px;
-}
-
-
-.inicio-conteudo p {
-    max-width: 600px;
-    font-size: 17px;
-    line-height: 1.6;
-    margin-bottom: 25px;
-}
-
-
-/* CELULAR */
-
-@media (max-width: 600px) {
-
-    .foto-topo {
-        height: 250px;
-    }
-
     .inicio-conteudo {
         min-height: calc(100vh - 250px);
+
+        padding: 35px 20px;
     }
 
     .inicio-conteudo h1 {
         font-size: 31px;
     }
 
-}
+    .inicio-conteudo h2 {
+        font-size: 21px;
+    }
+
+    .inicio-conteudo p {
+        font-size: 16px;
+    }
+
+    .valores {
+        gap: 10px;
+    }
+
+    .foto-topo {
+        height: auto;
+    }
+
+    .foto-topo img {
+        width: 100%;
+        height: auto;
+    }
+
+    }
