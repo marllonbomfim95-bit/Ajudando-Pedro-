@@ -31,103 +31,66 @@
     enctype="multipart/form-data"
 >
 
-                <!-- ASSUNTO DO E-MAIL -->
+    <input
+        type="hidden"
+        name="_subject"
+        value="Novo comprovante - Juntos por uma Criança"
+    >
 
-                <input
-                    type="hidden"
-                    name="_subject"
-                    value="Novo comprovante - Juntos por uma Criança"
-                >
+    <input
+        type="hidden"
+        name="_template"
+        value="table"
+    >
 
+    <label for="nome">
+        Seu nome
+    </label>
 
-                <!-- FORMATO DO E-MAIL -->
+    <input
+        type="text"
+        id="nome"
+        name="Nome"
+        placeholder="Digite seu nome"
+        required
+    >
 
-                <input
-                    type="hidden"
-                    name="_template"
-                    value="table"
-                >
+    <label for="valor">
+        Valor da doação
+    </label>
 
+    <input
+        type="text"
+        id="valor"
+        name="Valor da doação"
+        placeholder="Ex.: R$ 50,00"
+        required
+    >
 
-                <!-- CAPTCHA -->
+    <label for="arquivo">
+        Comprovante do Pix
+    </label>
 
-                <input
-                    type="hidden"
-                    name="_captcha"
-                    value="false"
-                >
+    <input
+        type="file"
+        id="arquivo"
+        name="attachment"
+        accept=".pdf,.jpg,.jpeg,.png"
+        required
+    >
 
+    <small>
+        Formatos aceitos: PDF, JPG, JPEG e PNG.
+    </small>
 
-                <!-- NOME -->
+    <button
+        type="submit"
+        class="botao"
+    >
+        📤 Enviar comprovante
+    </button>
 
-                <label for="nome">
-                    Seu nome
-                </label>
-
-                <input
-                    type="text"
-                    id="nome"
-                    name="Nome"
-                    placeholder="Digite seu nome"
-                    required
-                >
-
-
-                <!-- VALOR -->
-
-                <label for="valor">
-                    Valor da doação
-                </label>
-
-                <input
-                    type="text"
-                    id="valor"
-                    name="Valor da doação"
-                    placeholder="Ex.: R$ 50,00"
-                    required
-                >
-
-
-                <!-- COMPROVANTE -->
-
-                <label for="arquivo">
-                    Comprovante do Pix
-                </label>
-
-                <input
-                    type="file"
-                    id="arquivo"
-                    name="attachment"
-                    accept="application/pdf,.pdf,image/jpeg,.jpg,.jpeg,image/png,.png"
-                    required
-                >
-
-                <small>
-                    Formatos aceitos: PDF, JPG, JPEG e PNG.
-                </small>
-
-
-                <!-- BOTÃO -->
-
-                <button
-                    type="submit"
-                    class="botao"
-                >
-                    📤 Enviar comprovante
-                </button>
-
-            </form>
-
-
-            <!-- VOLTAR -->
-
-            <a
-                href="pix.html"
-                class="voltar"
-            >
-                ← Voltar
-            </a>
-
+</form>
         </div>
 
     </main>
