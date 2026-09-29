@@ -1,0 +1,452 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f4f8ff;
+    color: #202938;
+}
+
+
+/* PÁGINA */
+
+.pagina {
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 25px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #eaf4ff,
+            #ffffff
+        );
+}
+
+
+/* PRIMEIRA PÁGINA */
+
+.inicio {
+    text-align: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            #075dcc,
+            #4da3ff
+        );
+
+    color: white;
+}
+
+.conteudo {
+    width: 100%;
+    max-width: 600px;
+}
+
+.coracao {
+    font-size: 65px;
+    margin-bottom: 15px;
+}
+
+.inicio h1 {
+    font-size: 42px;
+    margin-bottom: 15px;
+}
+
+.inicio .subtitulo {
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.inicio p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+
+/* CARD */
+
+.card {
+    width: 100%;
+    max-width: 520px;
+
+    background: white;
+
+    padding: 35px 25px;
+
+    border-radius: 22px;
+
+    text-align: center;
+
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.08);
+}
+
+.card h1 {
+    font-size: 30px;
+    margin-bottom: 12px;
+}
+
+.card p {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+.icone {
+    font-size: 50px;
+    margin-bottom: 10px;
+}
+
+.pix-icon {
+    font-size: 55px;
+    margin-bottom: 10px;
+}
+
+
+/* BOTÃO */
+
+.botao {
+    display: block;
+
+    width: 100%;
+
+    margin-top: 25px;
+
+    padding: 16px;
+
+    border: none;
+    border-radius: 12px;
+
+    background: #0b5ed7;
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 17px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    text-align: center;
+
+    transition: 0.2s;
+}
+
+.botao:hover {
+    transform: translateY(-2px);
+    background: #084db3;
+}
+
+
+/* VALORES */
+
+.valores {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 12px;
+
+    margin: 25px 0;
+}
+
+.valores button {
+    padding: 15px;
+
+    background: white;
+
+    border: 2px solid #0b5ed7;
+
+    color: #0b5ed7;
+
+    border-radius: 12px;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+.valores button:hover {
+    background: #0b5ed7;
+    color: white;
+}
+
+
+/* INPUTS */
+
+label {
+    display: block;
+
+    text-align: left;
+
+    font-weight: bold;
+
+    margin: 17px 0 7px;
+}
+
+input[type="number"],
+input[type="text"],
+input[type="file"] {
+    width: 100%;
+
+    padding: 14px;
+
+    border: 1px solid #d9dfe8;
+
+    border-radius: 10px;
+
+    font-size: 16px;
+
+    outline: none;
+
+    background: #fafcff;
+}
+
+input:focus {
+    border-color: #0b5ed7;
+}
+
+
+/* PIX */
+
+.pix-box {
+    background: #f1f5f9;
+
+    padding: 20px;
+
+    border-radius: 15px;
+
+    margin: 25px 0;
+}
+
+.pix-box span {
+    display: block;
+
+    font-size: 14px;
+
+    color: #777;
+
+    margin-bottom: 8px;
+}
+
+.pix-box strong {
+    display: block;
+
+    font-size: 21px;
+
+    word-break: break-all;
+
+    margin-bottom: 18px;
+}
+
+.botao-secundario {
+    border: none;
+
+    background: #0b5ed7;
+
+    color: white;
+
+    padding: 12px 20px;
+
+    border-radius: 9px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+.copiado {
+    display: none;
+
+    color: #159447 !important;
+
+    font-weight: bold;
+
+    margin: 12px 0 0 !important;
+}
+
+.aviso {
+    font-size: 14px;
+
+    color: #777;
+}
+
+
+/* VOLTAR */
+
+.voltar {
+    display: block;
+
+    margin-top: 20px;
+
+    color: #0b5ed7;
+
+    text-decoration: none;
+
+    font-weight: bold;
+}
+
+
+/* ARQUIVO */
+
+small {
+    display: block;
+
+    text-align: left;
+
+    margin-top: 7px;
+
+    color: #777;
+}
+
+
+/* AGRADECIMENTO */
+
+.agradecimento .coracao {
+    font-size: 70px;
+}
+
+.agradecimento h2 {
+    margin-bottom: 15px;
+}
+
+.linha {
+    width: 80px;
+
+    height: 3px;
+
+    background: #0b5ed7;
+
+    margin: 25px auto;
+}
+
+.frase-final {
+    font-weight: bold;
+    color: #0b5ed7 !important;
+}
+
+
+/* CELULAR */
+
+@media (max-width: 500px) {
+
+    .pagina {
+        padding: 15px;
+    }
+
+    .inicio h1 {
+        font-size: 34px;
+    }
+
+    .inicio .subtitulo {
+        font-size: 21px;
+    }
+
+    .inicio p {
+        font-size: 16px;
+    }
+
+    .card {
+        padding: 30px 20px;
+    }
+
+    .card h1 {
+        font-size: 27px;
+    }
+
+    .valores {
+        gap: 10px;
+    }
+.foto-topo {
+    width: 100%;
+    height: 300px;
+    
+
+}
+
+
+.foto-topo img {
+    width: 100%;
+    height: 150%;
+    
+
+}
+
+
+.inicio-conteudo {
+    min-height: calc(100vh - 300px);
+
+    padding: 45px 25px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    background: linear-gradient(
+        135deg,
+        #075dcc,
+        #4da3ff
+    );
+
+    color: white;
+}
+
+
+.inicio-conteudo .coracao {
+    font-size: 55px;
+    margin-bottom: 10px;
+}
+
+
+.inicio-conteudo h1 {
+    font-size: 38px;
+    margin-bottom: 10px;
+}
+
+
+.inicio-conteudo h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+
+.inicio-conteudo p {
+    max-width: 600px;
+    font-size: 17px;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+
+/* CELULAR */
+
+@media (max-width: 600px) {
+
+    .foto-topo {
+        height: 250px;
+    }
+
+    .inicio-conteudo {
+        min-height: calc(100vh - 250px);
+    }
+
+    .inicio-conteudo h1 {
+        font-size: 31px;
+    }
+
+}

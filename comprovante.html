@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Enviar comprovante</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="pagina">
+
+        <div class="card">
+
+            <div class="icone">📄</div>
+
+            <h1>Enviar comprovante</h1>
+
+            <p>
+                Obrigado por realizar sua doação!
+                Envie agora o comprovante do Pix.
+            </p>
+
+            <form
+                action="correiadejesusgraziele@gmail.com"
+                method="POST"
+                enctype="multipart/form-data"
+            >
+
+                <!-- ASSUNTO DO E-MAIL -->
+
+                <input
+                    type="hidden"
+                    name="_subject"
+                    value="Novo comprovante - Juntos por uma Criança"
+                >
+
+
+                <!-- FORMATO DO E-MAIL -->
+
+                <input
+                    type="hidden"
+                    name="_template"
+                    value="table"
+                >
+
+
+                <!-- CAPTCHA -->
+
+                <input
+                    type="hidden"
+                    name="_captcha"
+                    value="false"
+                >
+
+
+                <!-- NOME -->
+
+                <label for="nome">
+                    Seu nome
+                </label>
+
+                <input
+                    type="text"
+                    id="nome"
+                    name="Nome"
+                    placeholder="Digite seu nome"
+                    required
+                >
+
+
+                <!-- VALOR -->
+
+                <label for="valor">
+                    Valor da doação
+                </label>
+
+                <input
+                    type="text"
+                    id="valor"
+                    name="Valor da doação"
+                    placeholder="Ex.: R$ 50,00"
+                    required
+                >
+
+
+                <!-- COMPROVANTE -->
+
+                <label for="arquivo">
+                    Comprovante do Pix
+                </label>
+
+                <input
+                    type="file"
+                    id="arquivo"
+                    name="attachment"
+                    accept="application/pdf,.pdf,image/jpeg,.jpg,.jpeg,image/png,.png"
+                    required
+                >
+
+                <small>
+                    Formatos aceitos: PDF, JPG, JPEG e PNG.
+                </small>
+
+
+                <!-- BOTÃO -->
+
+                <button
+                    type="submit"
+                    class="botao"
+                >
+                    📤 Enviar comprovante
+                </button>
+
+            </form>
+
+
+            <!-- VOLTAR -->
+
+            <a
+                href="pix.html"
+                class="voltar"
+            >
+                ← Voltar
+            </a>
+
+        </div>
+
+    </main>
+
+</body>
+
+</html>

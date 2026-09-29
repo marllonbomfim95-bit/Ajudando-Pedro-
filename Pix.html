@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Pagamento Pix</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="pagina">
+
+        <div class="card">
+
+            <div class="pix-icon">💚</div>
+
+            <h1>Faça o Pix</h1>
+
+            <p id="valorPix">
+                Sua doação
+            </p>
+
+            <div class="pix-box">
+
+                <span>Chave Pix</span>
+
+                <strong id="chavePix">
+                    (73)988384436
+                </strong>
+
+                <button
+                    class="botao-secundario"
+                    onclick="copiarPix()"
+                >
+                    📋 Copiar chave Pix
+                </button>
+
+                <p
+                    id="mensagemCopiado"
+                    class="copiado"
+                >
+                    ✓ Chave Pix copiada!
+                </p>
+
+            </div>
+
+            <p class="aviso">
+                Depois de realizar o Pix, clique no botão
+                abaixo para enviar seu comprovante.
+            </p>
+
+            <a
+                href="comprovante.html"
+                class="botao"
+            >
+                Já fiz minha doação
+            </a>
+
+            <a href="doacao.html" class="voltar">
+                ← Voltar
+            </a>
+
+        </div>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
